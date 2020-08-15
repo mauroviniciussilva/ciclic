@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$background-color: #f0f0f7;
+$primary-color: #00e0cd;
+$secondary-color: #f6ae06;
+$dark-color: #404040;
+$muted-color: #898989;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100vh;
+}
+
+body {
+  background: $background-color;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: inherit;
+  overflow: auto;
+}
+
+body,
+input,
+button {
+  font: 1rem Poppins;
+  color: $dark-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-color;
+}
+
+small {
+  font-size: 0.7rem;
+  color: $muted-color;
+}
+
+@import './utils';
+@import './form';
+
+.header {
+  margin-bottom: 3rem;
+  .logo {
+    max-height: 9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    text-align: center;
+  }
+
+  main {
+    height: fit-content;
+  }
+
+  .header {
+    .logo {
+      max-height: 7rem;
+    }
+  }
+}
